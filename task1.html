@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+         class movie{
+            constructor(title,studio,rating){
+                this.title = title;
+                this.studio = studio;
+                this.rating = rating;
+                if (rating==null){
+                    return this.rating = "PG";
+                }else{
+                    return this.rating = rating;
+                }
+            }
+            getPG(array){
+                let result = array.filter((element)=>element.rating)
+                return result;
+            }
+            
+         }
+             let movie1 = new movie("vikram","raajlamal studio");
+             let movie2 = new movie("rythm","B studio","IMDB4");
+             let movie3 = new movie("asuran","c studio","IMDB4");
+
+             let array = [movie1,movie2,movie3]
+             console.log(movie1.getPG(array));
+    </script>
+</body>
+</html>
